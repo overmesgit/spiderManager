@@ -1,10 +1,10 @@
 import os
 from time import sleep
 from grab.spider import Spider, Task
-import django
-
-os.environ['DJANGO_SETTINGS_MODULE'] = 'spiderManager.settings'
-django.setup()
+# import django
+#
+# os.environ['DJANGO_SETTINGS_MODULE'] = 'spiderManager.settings'
+# django.setup()
 from manager.models import SiteUrlParserResult
 
 
