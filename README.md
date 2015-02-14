@@ -20,4 +20,8 @@ python manage.py runserver
 python manage.py start_spider
 
 
+**User interface:**
+http://127.0.0.1:8000/
+
+
 
