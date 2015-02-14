@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load bootstrap3 %}
+{% load custom_tags %}
+
+{% block content %}
+    <h1>Parser tasks:</h1>
+    <ul class="list-group">
+    {% for task in object_list %}
+        <li class="list-group-item {{ task.get_status|list_status_classes }}">
+            <a href="{% url 'parser_tasks_detail' task.id %}">{{ task.date }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+    <a href="{% url 'parser_tasks_create' %}" class="btn btn-primary">Add new task</a>
+{% endblock %}

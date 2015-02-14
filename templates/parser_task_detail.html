@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load bootstrap3 %}
+{% load custom_tags %}
+
+{% block content %}
+    <h1>Parsing task #{{ object.id }} status:</h1>
+    <p>Created time {{ object.date }}</p>
+    <ul class="list-group">
+    {% for result in object.results.all %}
+        <li class="list-group-item {{ result.status|list_status_classes }}">
+            <p>Url: {{ result.site_url }} Status: {{ result.get_status_display }}</p>
+            {% if result.status != 'lo' %}<p>Result: {{ result.result }}</p>{% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

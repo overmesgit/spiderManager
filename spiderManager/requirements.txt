@@ -1,0 +1,6 @@
+Django=1.7
+pycurl
+lxml
+grab
+pyquery
+django-bootstrap3
