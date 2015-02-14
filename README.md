@@ -2,16 +2,22 @@
 
 Interface for http spider, which select title from url's asynchronously.
 
-Start web-interface:
+**Requirements:**
+
+python2.7
+
+**Install:**
+
+pip install -r spiderManager/requirements.txt
+
+**Start web-interface:**
 
 python manage.py runserver
 
 
-Start spider daemon:
+**Start spider daemon:**
 
 python manage.py start_spider
 
 
-Requirements:
 
-python2.7
